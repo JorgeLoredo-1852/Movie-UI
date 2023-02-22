@@ -64,6 +64,13 @@ export default function Home() {
     e.target[0].value = ""
 }
 
+const onSubmitSearchBar = (e) => {
+  e.preventDefault();
+  setSearch(e.target[0].value)
+  refListBio.current?.scrollIntoView({behavior: 'smooth'});
+  e.target[0].value = ""
+}
+
 const onClickButton = (e) => {
     e.preventDefault();    
     setSearch(searchLetter)
@@ -121,7 +128,7 @@ const onChangeLetter = (e) =>{
                                 }}
                                 noValidate
                                 autoComplete="off"
-                                onSubmit={onClickSearchBar}
+                                onSubmit={onSubmitSearchBar}
                             >
                                 <ThemeProvider theme={theme}>
                                     <TextField onChange={onChangeLetter} ref = {refSearchBar}  color="error" placeholder='Iron Man' sx={{ flex: 1, input:{ textAlign: downSm ? "center":"left",color:"white", fontSize:"1.4rem", padding:downSm ? "0.5rem 1rem" : "0.5rem 10rem 0.5rem 1rem"} }}/>
