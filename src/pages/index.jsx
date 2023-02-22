@@ -128,7 +128,7 @@ const onChangeLetter = (e) =>{
                                 </ThemeProvider>
                                 {!downSm ? <div onClick={onClickButton} style={{color:"white", fontSize:"1.4rem", position:downSm ? "relative" : "absolute", right:"0",  padding:"0.45rem 1.5rem", cursor:"pointer",backgroundColor:"#B81D24"}}>Search</div> : <></>}
                         </Box>
-                        {downSm ?<div style={{marginTop:"1rem",color:"white", fontSize:"1.4rem", textAlign:"center", position:downSm ? "relative" : "absolute", right:"0",  padding:"0.45rem 1.5rem", cursor:"pointer",backgroundColor:"#B81D24"}}>Search</div> : <></>}
+                        {downSm ?<div onClick={onClickButton} style={{marginTop:"1rem",color:"white", fontSize:"1.4rem", textAlign:"center", position:downSm ? "relative" : "absolute", right:"0",  padding:"0.45rem 1.5rem", cursor:"pointer",backgroundColor:"#B81D24"}}>Search</div> : <></>}
 
                     </Grid>
                 </Grid>
